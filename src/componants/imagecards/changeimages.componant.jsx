@@ -1,4 +1,3 @@
-import { useState } from "react";
 import CreateImageArray from "../createarr/createarr";
 import "./changeimage.css";
 const CreateImage = (props) => {
@@ -12,8 +11,6 @@ const CreateImage = (props) => {
           right={props.right}
           ImageArr={props.ImageArr}
         />
-        {/* {console.log(props.reset)} */}
-        {/* {console.log(props.right)} */}
         {props.right > 5 ? (
           <div className="done">
             <span>You Won 👏 </span>

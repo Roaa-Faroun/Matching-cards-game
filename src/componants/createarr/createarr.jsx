@@ -2,28 +2,9 @@ import { useEffect, useState } from "react";
 const CreateImageArray = (props) => {
   const [game, setGame] = useState([]);
 
-  // const getRandInd = (arr) => {
-  //   let index = Math.floor(Math.random() * 12);
-  //   if (arr[index] !== null) {
-  //     return arr.indexOf(null);
-  //   }
-  //   return index;
-  // };
-  // const createArr = () => {
-  //   let arr = [...ImageArr];
-  //         for (let i = 0; i < 12; i++) {
-  //     let ind = getRandInd(arr);
-  //     arr[ind] = imageGroup[i];
-  //   }
-  //   setImageArr(arr);
-  // };
-  // useEffect(() => {
-  //   createArr();
-  // }, []);
   useEffect(() => {
     checkWin();
   }, [game]);
-  // console.log(props.reset);
   const chickandFlip = (i, e) => {
     setGame([...game, { index: i, pic: e }]);
     document.querySelectorAll(".box")[i].style = `transform: rotateY(-180deg);`;
